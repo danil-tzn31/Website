@@ -1,0 +1,88 @@
+/* ============================================
+   FOOTER SECTION STYLES
+   ============================================ */
+
+.footer-section {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1d3557 100%);
+    color: #ffffff;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-brand {
+    font-family: 'Arizonia', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4a9d8f;
+}
+
+/* Social Icons */
+.footer-social {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    justify-content: flex-end;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #2a9d8f;
+    transform: translateY(-3px);
+}
+
+/* Footer Divider */
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 30px 0 20px;
+}
+
+/* Footer Copyright */
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-social {
+        justify-content: center;
+    }
+}

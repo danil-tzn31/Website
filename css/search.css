@@ -1,0 +1,242 @@
+/* ============================================
+   SEARCH CARD & TABS
+   ============================================ */
+.search-card-container {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%; 
+    max-width: 1200px;
+    z-index: 10;
+    margin-bottom: 1rem;
+}
+
+.search-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem !important;
+}
+
+.search-tabs .nav-link {
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.search-tabs .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.025);
+}
+
+.search-tabs .nav-link.active {
+    background-color: #2a9d8f;
+    color: white;
+    box-shadow: 0 4px 12px rgba(42, 157, 143, 0.4);
+}
+
+.search-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    /* CRITICAL: Ensure overflow is NOT hidden so dropdowns can stick out */
+    overflow: visible; 
+}
+
+.search-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Labels */
+.form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Input Styles */
+.simple-search-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    height: 50px;
+}
+
+.simple-search-input::placeholder {
+    color: #adb5bd;
+}
+
+.simple-search-input:focus {
+    outline: none;
+    border-color: #2a9d8f;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.1);
+}
+
+/* Search Button */
+.btn-simple-search {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2a9d8f 0%, #457b9d 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(42, 157, 143, 0.3);
+}
+
+.btn-simple-search:hover {
+    transform: scale(1.025);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.4);
+}
+
+/* ============================================
+   PASSENGER DROPDOWN STYLES (FIXED)
+   ============================================ */
+.passenger-selector {
+    position: relative;
+    cursor: pointer; /* Added for better UX */
+}
+
+.passenger-display {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.passenger-dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 250px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    padding: 1rem;
+    z-index: 1050 !important; /* Kept high z-index */
+    border: 1px solid #e9ecef;
+    display: none; /* Hidden by default */
+}
+
+/* --- THE FIX IS HERE --- */
+/* Old incorrect rule: .passenger-dropdown.show */
+/* New correct rule: Show child when PARENT has 'active' */
+.passenger-selector.active .passenger-dropdown {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.passenger-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.passenger-row:last-child {
+    margin-bottom: 0;
+}
+
+.passenger-label span {
+    display: block;
+    font-weight: 600;
+    color: #333;
+}
+
+.passenger-label small {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-counter {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #2a9d8f;
+    background: white;
+    color: #2a9d8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.btn-counter:hover {
+    background: #2a9d8f;
+    color: white;
+}
+
+.passenger-count {
+    font-weight: 600;
+    width: 20px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .search-card-container {
+        width: 95%;
+        max-width: 100%;
+    }
+    
+    .passenger-dropdown {
+        width: 100%;
+    }
+}
+
+/* Adjust button alignment for hotel search */
+#hotels .btn-simple-search {
+    border-radius: 12px;
+}
+
+/* Mobile responsive tweak for the guest selector */
+@media (max-width: 991px) {
+    #hotel-guest-selector {
+        margin-bottom: 10px;
+    }
+}

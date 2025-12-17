@@ -1,0 +1,75 @@
+/* ============================================
+   NAVIGATION BAR
+   ============================================ */
+.navbar {
+    background: transparent;
+    backdrop-filter: none;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: white;
+    backdrop-filter: blur(150px);
+}
+
+.navbar-brand {
+    font-family: 'Arizonia', cursive;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: black !important;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 400;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+}
+
+.navbar.scrolled .nav-link {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
+    color: #000 !important;
+}
+
+.btn-outline-light {
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.navbar.scrolled .btn-outline-light {
+    border-color: #333;
+    color: #333;
+}
+
+.navbar.scrolled .btn-outline-light:hover {
+    background: #333;
+    color: white;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2a9d8f 0%, #457b9d 100%);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn-success:hover {
+    background: white;
+    color: black;
+}

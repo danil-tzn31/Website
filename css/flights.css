@@ -1,0 +1,121 @@
+/* ============================================
+   FLIGHT CARDS (Clean Layout Fix)
+   ============================================ */
+
+.flight-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 15px; /* Matches your destination styling */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    min-height: 380px; /* Ensures consistent height */
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: #2a9d8f;
+}
+
+/* --- 1. VISUAL AREA (Top) --- */
+.flight-card-visual {
+    height: 140px; /* Fixed height for the logo area */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+}
+
+.flight-card-visual .airline-logo {
+    max-width: 100px;
+    max-height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    z-index: 1;
+}
+
+.flight-card-visual .duration-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #fff;
+    color: #2a9d8f;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+/* --- 2. INFO AREA (Middle) --- */
+.flight-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    text-align: center;
+    background: white; /* Ensures text is readable */
+}
+
+.flight-route {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.flight-time-range {
+    font-size: 0.95rem;
+    color: #495057;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.flight-airline-name {
+    font-size: 0.75rem;
+    color: #adb5bd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* --- 3. FOOTER AREA (Bottom) --- */
+.flight-card-footer {
+    margin-top: auto;
+}
+
+.flight-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2a9d8f; /* Theme Green */
+    margin-bottom: 10px;
+    display: block;
+}
+
+.btn-flight-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    background: #2a9d8f;
+    color: white;
+    font-weight: 600;
+    border: none;
+    transition: background 0.2s;
+}
+
+.btn-flight-select:hover {
+    background: #21867a;
+}

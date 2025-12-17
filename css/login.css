@@ -1,0 +1,268 @@
+/* ============================================
+   LOGIN MODAL STYLES
+   ============================================ */
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%);
+    color: white;
+    border: none;
+    padding: 24px 30px;
+}
+
+.modal-header .modal-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.modal-header .btn-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.login-modal-subtitle {
+    color: #666;
+    font-size: 0.938rem;
+    margin-bottom: 24px;
+}
+
+/* Form Styles */
+.login-modal-form .form-label {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+}
+
+.login-modal-form .form-control {
+    padding: 12px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.938rem;
+    transition: all 0.3s ease;
+}
+
+.login-modal-form .form-control:focus {
+    border-color: #2a9d8f;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.1);
+    outline: none;
+}
+
+.login-modal-form .form-control::placeholder {
+    color: #aaa;
+}
+
+.login-modal-form .form-check {
+    margin-bottom: 0;
+}
+
+.login-modal-form .form-check-input {
+    border-radius: 4px;
+    border: 1.5px solid #e0e0e0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+}
+
+.login-modal-form .form-check-input:checked {
+    background-color: #2a9d8f;
+    border-color: #2a9d8f;
+}
+
+.login-modal-form .form-check-label {
+    font-size: 0.875rem;
+    color: #666;
+    margin-left: 8px;
+}
+
+.forgot-password {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.btn-login-modal {
+    background: #2a9d8f;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-login-modal:hover {
+    background: #238276;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.3);
+}
+
+/* Divider */
+.login-modal-divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.login-modal-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.login-modal-divider span {
+    background: white;
+    padding: 0 16px;
+    position: relative;
+    color: #999;
+    font-size: 0.875rem;
+}
+
+/* Social Login Buttons */
+.social-login-modal {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-social-modal {
+    width: 50px;
+    height: 50px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: white;
+    text-decoration: none;
+}
+
+.btn-social-modal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d0d0d0;
+}
+
+/* Google button with text */
+.btn-social-google {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    background: white;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.938rem;
+}
+
+.btn-social-google:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d0d0d0;
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-social-google img {
+    flex-shrink: 0;
+}
+
+/* Register Link */
+.register-link-modal {
+    text-align: center;
+    color: #666;
+    font-size: 0.938rem;
+}
+
+.register-link-modal a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link-modal a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.alert-danger {
+    border-radius: 8px;
+    font-size: 0.875rem;
+}
+
+/* Error Modal Styles */
+.modal-header.bg-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.modal-header.bg-danger .modal-title {
+    font-weight: 600;
+}
+
+.modal-backdrop.fade.show {
+    opacity: 0.5;
+}
+
+/* Modal Footer Styles */
+.login-modal-footer {
+    text-align: center;
+    margin-top: 18px;
+    color: #666;
+    font-size: 0.938rem;
+}
+
+.login-modal-footer a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.login-modal-footer a:hover {
+    text-decoration: underline;
+    color: #238276;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-header {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,128 @@
+/* Page Layout */
+body {
+    background-color: #f8f9fa;
+    padding-top: 80px; /* Space for fixed navbar */
+}
+
+/* Booking Card Container */
+.booking-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px linear-gradient(135deg, #0d1b2a 0%, #1d3557 100%);
+    background: #fff;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.booking-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Card Header */
+.card-header-custom {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-badge {
+    background: #e8f5e9;
+    color: #198754;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Card Body & Text */
+.card-body {
+    padding: 1.5rem;
+}
+
+.price-text {
+    color: #2a9d8f;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #6c757d;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* --- TABS STYLING (FIXED) --- */
+#bookingTabs .nav-item {
+    margin-right: 10px;
+}
+
+#bookingTabs .nav-link {
+    /* Inactive State: Dark Text on Light Grey */
+    color: #444 !important; 
+    background-color: #e9ecef;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 50px; /* Rounded pill shape */
+    border: 1px solid #dee2e6;
+}
+
+#bookingTabs .nav-link:hover {
+    background-color: #dde0e3;
+    color: #333 !important;
+}
+
+#bookingTabs .nav-link.active {
+    /* Active State: White Text on Teal */
+    background-color: #2a9d8f !important;
+    color: #fff !important;
+    border-color: #2a9d8f;
+    box-shadow: 0 4px 10px rgba(42, 157, 143, 0.3);
+}
+
+/* Empty State */
+.empty-state {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #6c757d;
+    background: #fff;
+    border-radius: 12px;
+    border-color: #2a9d8f;
+    border: 1px dashed;
+    margin-top: 20px;
+}
+
+.empty-state i {
+    color: #dee2e6;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Navbar Styles */
+.navbar-custom {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1d3557 100%);
+    box-shadow: 0 2px 8px rgba(29, 53, 87, 0.08);
+}
+
+.navbar-brand-custom {
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: white !important; /* Teal color for brand */
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.navbar-brand-custom:hover {
+    color: #e9c46a !important; /* Gold on hover */
+}

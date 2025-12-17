@@ -1,0 +1,69 @@
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    position: relative;
+    height: 600px;
+    min-height: 600px;
+    background-image: url('https://images.unsplash.com/photo-1728042880915-0dd755899018?q=80&w=1234&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 200px;
+}
+
+.hero-subtitle,
+.hero-title,
+.hero-description {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.3s forwards;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: rgb(69, 69, 69) 0.1em 0.1em 0.2em;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    text-shadow: rgb(69, 69, 69) 0.1em 0.1em 0.2em;
+}
+
+.hero-description {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,17 @@
+/* Navbar Styles */
+.navbar-custom {
+    background-color: #1d3557 !important; /* Deep blue background */
+    box-shadow: 0 2px 8px rgba(29, 53, 87, 0.08);
+}
+
+.navbar-brand-custom {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #2a9d8f !important; /* Teal color for brand */
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.navbar-brand-custom:hover {
+    color: #e9c46a !important; /* Gold on hover */
+}

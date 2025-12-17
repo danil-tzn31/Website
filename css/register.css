@@ -1,0 +1,352 @@
+/* ============================================
+   REGISTER PAGE STYLES - SPLIT LAYOUT
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.register-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ============================================
+   LEFT SIDE - IMAGE
+   ============================================ */
+.register-left {
+    flex: 1;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1708195559744-c2b3e60dbe27?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: left center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(29, 53, 87, 0.9) 0%, rgba(69, 123, 157, 0.85) 100%);
+
+}
+
+.register-left-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 40px;
+    max-width: 600px;
+}
+
+.register-logo {
+    font-family: 'Arizonia', cursive;
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.register-logo:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.register-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.register-text p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* ============================================
+   RIGHT SIDE - FORM
+   ============================================ */
+.register-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #fff;
+    overflow-y: auto;
+}
+
+.register-form-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.register-header {
+    margin-bottom: 30px;
+}
+
+.register-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.register-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Form Styles */
+.register-form .form-label {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+}
+
+.register-form .form-control {
+    padding: 12px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.938rem;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+}
+
+.register-form .form-control:focus {
+    border-color: #2a9d8f;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.1);
+    outline: none;
+}
+
+.register-form .form-control::placeholder {
+    color: #aaa;
+}
+
+.register-form .form-check {
+    margin-bottom: 24px;
+}
+
+.register-form .form-check-input {
+    border-radius: 4px;
+    border: 1.5px solid #e0e0e0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+}
+
+.register-form .form-check-input:checked {
+    background-color: #2a9d8f;
+    border-color: #2a9d8f;
+}
+
+.register-form .form-check-label {
+    font-size: 0.875rem;
+    color: #666;
+    margin-left: 8px;
+}
+
+.register-form .form-check-label a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-form .form-check-label a:hover {
+    text-decoration: underline;
+}
+
+/* Register Button */
+.btn-register {
+    background: #2a9d8f;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.btn-register:hover {
+    background: #238276;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.3);
+}
+
+/* Divider */
+.register-divider {
+    text-align: center;
+    margin: 8px 0;
+    position: relative;
+}
+
+.register-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.register-divider span {
+    background: white;
+    padding: 0 16px;
+    position: relative;
+    color: #999;
+    font-size: 0.875rem;
+}
+
+/* Social Register Buttons */
+.social-register {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 14px;
+}
+
+.btn-social {
+    width: 50px;
+    height: 50px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d0d0d0;
+}
+
+/* Google button with text */
+.btn-social-google {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    background: white;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.938rem;
+}
+
+.btn-social-google:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d0d0d0;
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-social-google img {
+    flex-shrink: 0;
+}
+
+/* Register Footer */
+.register-footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.register-footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.938rem;
+}
+
+.register-footer a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Login Modal Title - Halina word styling */
+.modal-header .modal-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.modal-title .halina-text {
+    font-family: 'Arizonia', cursive;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .register-container {
+        flex-direction: column;
+    }
+    
+    .register-left {
+        min-height: 300px;
+    }
+    
+    .register-text h1 {
+        font-size: 2rem;
+    }
+    
+    .register-text p {
+        font-size: 1rem;
+    }
+    
+    .register-logo {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .register-form-container {
+        padding: 0 10px;
+    }
+    
+    .register-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .register-left {
+        min-height: 250px;
+    }
+    
+    .register-text h1 {
+        font-size: 1.75rem;
+    }
+}

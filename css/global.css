@@ -1,0 +1,175 @@
+/* ============================================
+   IMPORT FONTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* =================================================== */
+/* GLOBAL.CSS (Update for Sort Pills) */
+/* =================================================== */
+
+/* Assuming you have a base style, add or update the sort-pill section: */
+
+.sort-pill {
+    /* Style for inactive pills (Lowest price first, Top reviewed) */
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    
+    /* Inactive State */
+    background-color: #f0f0f0; 
+    color: #457b9d; /* Blue/Gray text */
+    border: 1px solid #ddd;
+}
+
+.sort-pill:hover {
+    background-color: #e0e0e0;
+}
+
+.sort-pill.active {
+    /* Active State (Our top picks) */
+    background-color: #2a9d8f; /* Your main green color */
+    color: white;
+    font-weight: bold;
+    border-color: #2a9d8f;
+}
+
+/* --- Booking Modal Custom Style (Consistent Colors) --- */
+#bookingModal .modal-content {
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+    overflow: hidden;
+    padding: 0;
+    background: #fff;
+}
+
+#bookingModal .modal-header {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1d3557 100%);
+    color: white;
+    border-bottom: none;
+    border-radius: 24px 24px 0 0;
+    padding: 1.5rem 2rem 1rem 2rem;
+}
+
+#bookingModal .modal-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+#bookingModal .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+#bookingModal .btn-close:hover {
+    opacity: 1;
+}
+
+#bookingModal .modal-body {
+    padding: 2rem 2rem 1.5rem 2rem;
+    background: #fff;
+}
+
+#bookingModal h4#modalBookName {
+    font-weight: 700;
+    color: #2a9d8f; /* Use main green */
+    margin-bottom: 0.25rem;
+    font-size: 1.35rem;
+}
+
+#bookingModal #modalBookCategory.badge {
+    font-size: 1rem;
+    font-weight: 600;
+    background: #2a9d8f; /* Main green */
+    color: #fff;
+    border-radius: 0.75rem;
+    padding: 0.4em 1em;
+    margin-bottom: 0.5rem;
+}
+
+#bookingModal .d-flex {
+    margin-bottom: 0.5rem;
+}
+
+#bookingModal .h5,
+#bookingModal .modal-body .h5 {
+    font-weight: 700;
+    color: #222;
+}
+
+#bookingModal .modalBookPrice {
+    color: #2a9d8f;
+    font-weight: 700;
+}
+
+#bookingModal .alert-warning {
+    border-radius: 12px;
+    font-size: 1.08rem;
+    background: #fff8e1;
+    border: none;
+    color: #8a6d3b;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#bookingModal .d-grid .btn-outline-primary,
+#bookingModal .d-grid .btn-primary {
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+    margin-top: 0.5rem;
+}
+
+#bookingModal .d-grid .btn-outline-primary {
+    border-width: 2px;
+    background: #fff;
+    color: #2a9d8f; /* Main green */
+    border-color: #2a9d8f;
+    transition: background 0.2s, color 0.2s;
+}
+#bookingModal .d-grid .btn-outline-primary:hover {
+    background: #2a9d8f;
+    color: #fff;
+}
+
+#bookingModal .d-grid .btn-primary {
+    background: #2a9d8f;
+    border: none;
+    color: #fff;
+    transition: background 0.2s;
+}
+#bookingModal .d-grid .btn-primary:hover {
+    background: #2a9d8f;
+}
+
+@media (max-width: 576px) {
+    #bookingModal .modal-body, #bookingModal .modal-header {
+        padding: 1rem !important;
+    }
+    #bookingModal .modal-content {
+        border-radius: 12px;
+    }
+}

@@ -1,0 +1,97 @@
+/* ============================================
+   TRAVEL RECOMMENDATIONS SECTION
+   ============================================ */
+.recommendations-section {
+    background: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.recommendations-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.recommendation-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.recommendation-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.recommendation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recommendation-card:hover .recommendation-image img {
+    transform: scale(1.05);
+}
+
+.recommendation-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(42, 157, 143, 0.9);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.recommendation-content {
+    padding: 1.5rem;
+}
+
+.recommendation-content h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.recommendation-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.recommendation-duration {
+    color: #2a9d8f;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-outline-success {
+    border-color: #2a9d8f;
+    color: #2a9d8f;
+    border-radius: 20px;
+    padding: 0.4rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background: #2a9d8f;
+    border-color: #2a9d8f;
+    color: white;
+}
