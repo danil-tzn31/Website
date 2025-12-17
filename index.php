@@ -465,7 +465,7 @@ if (isset($_SESSION['login_error'])) {
             <div class="row align-items-center">
                 <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <h5 class="footer-brand">Halina</h5>
-                    <p class="footer-tagline">Your travel companion</p>
+                    <p class="footer-tagline">Your Gateway to Wanderland</p>
                 </div>
                 <div class="col-md-4 text-center mb-3 mb-md-0">
                     <div class="footer-links">
