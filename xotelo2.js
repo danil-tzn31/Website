@@ -1,6 +1,6 @@
-// ============================================
-// XOTELO HYBRID SEARCH (Refactored: Fetch & Var)
-// ============================================
+// ===========================================
+// XOTELO SEARCH
+// ===========================================
 
 (function() {
 
@@ -13,7 +13,7 @@
     };
 
     var RAPIDAPI_HOST = 'xotelo-hotel-prices.p.rapidapi.com';
-    var RAPIDAPI_KEY = '5559c078d8mshd05aafeafe9af7ap11c3d1jsn9352a8e5b475'; 
+    var RAPIDAPI_KEY = '52f7cf1586msh55c6872a1c10c08p1c127cjsn19c27e52187c'; 
     var BASE_URL = 'https://' + RAPIDAPI_HOST;
 
     // 2. STATE
@@ -33,21 +33,39 @@
     var sortPills = document.querySelectorAll('#hotel-sort-container .sort-pill');
     var flightSortContainer = document.getElementById('sort-container');
 
-    // 3. API HELPER (Using Fetch)
+    // 3. API HELPER (Using XMLHttpRequest)
     function callApi(endpoint) {
-        var url = endpoint.indexOf('http') === 0 ? endpoint : BASE_URL + endpoint;
-        return fetch(url, {
-            method: 'GET',
-            headers: {
-                'x-rapidapi-host': RAPIDAPI_HOST,
-                'x-rapidapi-key': RAPIDAPI_KEY
-            }
-        }).then(function(response) {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('HTTP Error: ' + response.status);
-            }
+        return new Promise(function(resolve, reject) {
+            var url = endpoint.indexOf('http') === 0 ? endpoint : BASE_URL + endpoint;
+            var xhr = new XMLHttpRequest();
+            
+            xhr.open('GET', url, true);
+            
+            // Set Headers
+            xhr.setRequestHeader('x-rapidapi-host', RAPIDAPI_HOST);
+            xhr.setRequestHeader('x-rapidapi-key', RAPIDAPI_KEY);
+
+            xhr.onreadystatechange = function() {
+                // ReadyState 4 means the request is done
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        try {
+                            var data = JSON.parse(xhr.responseText);
+                            resolve(data);
+                        } catch (e) {
+                            reject(new Error("JSON Parse Error"));
+                        }
+                    } else {
+                        reject(new Error('HTTP Error: ' + xhr.status));
+                    }
+                }
+            };
+
+            xhr.onerror = function() {
+                reject(new Error("Network Error"));
+            };
+
+            xhr.send();
         });
     }
 
